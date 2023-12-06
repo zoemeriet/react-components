@@ -1,17 +1,13 @@
 import React from "react";
 
-import "./card.css";
-
 export interface CardProps {
-  img: { src: string; alt: string };
   title: string;
 }
 
-export function Card({ img, title, children}: React.PropsWithChildren<CardProps>) {
+export function Card({ title, children}: React.PropsWithChildren<CardProps>) {
   return (
-    <article data-card>
-      <img data-card-img src={img.src} alt={img.alt} />
-      <h2>{title}</h2>
+    <article>
+      <h2 className="text-3xl font-bold underline">{title}</h2>
       {children}
     </article>
   );
